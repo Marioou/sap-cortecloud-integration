@@ -2,6 +2,8 @@ import axios, { AxiosInstance, AxiosError } from 'axios';
 import { EncryptionUtil } from '../../utils/encryption.util';
 import logger from '../../utils/logger.util';
 import { CorteCloudAuthService } from './auth.service';
+import { randomUUID } from 'crypto';
+import { ICorteCloudError } from '../../interfaces/api.interface';
 
 export abstract class BaseApiService {
     protected apiClient: AxiosInstance;
@@ -21,7 +23,7 @@ export abstract class BaseApiService {
     private setupInterceptors(): void {
         this.apiClient.interceptors.request.use(
             (config) => {
-                const requestId = crypto.randomUUID();
+                const requestId = randomUUID();
                 logger.info({
                     message: 'API Request',
                     requestId,
@@ -51,14 +53,15 @@ export abstract class BaseApiService {
         );
     }
 
-    protected handleApiError(error: AxiosError): never {
+    protected handleApiError(error: AxiosError<ICorteCloudError>): never {
         logger.error('API Error:', {
             message: error.message,
             status: error.response?.status,
             data: error.response?.data
         });
 
-        throw new Error(`API Error: ${error.response?.data?.error?.message || error.message}`);
+        const errorMessage = error.response?.data?.error?.message || error.message;
+        throw new Error(`API Error: ${errorMessage}`);
     }
 
     protected encryptSensitiveData(data: any): any {
