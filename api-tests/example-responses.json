@@ -1,0 +1,62 @@
+{
+  "services_list_response": {
+    "resource": [
+      {
+        "id": 141,
+        "internal_code": null,
+        "status": {
+          "code": 6,
+          "created_date": "2016-03-28 18:55:13",
+          "budgeted_date": "2016-03-31 14:57:37",
+          "purchased_date": "2017-10-17 20:51:40"
+        }
+      }
+    ],
+    "meta": {
+      "count": 7,
+      "next": 3
+    }
+  },
+  "service_detail_response": {
+    "id": 1101,
+    "internal_code": "1234",
+    "observation": null,
+    "status": {
+      "code": 7,
+      "created_date": "2018-10-22 11:58:22",
+      "budgeted_date": "2018-11-07 13:45:35",
+      "purchased_date": "2019-02-04 12:56:14",
+      "authorized_date": "2019-02-04 12:56:26",
+      "finished_date": null
+    },
+    "client": {
+      "internal_code": "1247"
+    },
+    "labour": {
+      "cutting": {
+        "price": 212,
+        "quantity": 53
+      },
+      "edging": {
+        "price": 32.4,
+        "quantity": 29
+      }
+    }
+  },
+  "boards_list_response": {
+    "resource": [
+      {
+        "internal_code": "410/123/3",
+        "active": true,
+        "price": 10.144,
+        "stock": 10
+      },
+      {
+        "internal_code": "A-6357",
+        "active": true,
+        "price": 10.236,
+        "stock": 20
+      }
+    ]
+  }
+}

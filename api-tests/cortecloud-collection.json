@@ -1,0 +1,100 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2023-12-05T10:30:00.000Z",
+  "__export_source": "insomnia.desktop.app",
+  "resources": [
+    {
+      "_id": "req_services_list",
+      "name": "List Services",
+      "url": "https://apis.ccstg.com.br/services",
+      "method": "GET",
+      "params": [
+        {
+          "name": "status",
+          "value": "6"
+        },
+        {
+          "name": "limit",
+          "value": "100"
+        },
+        {
+          "name": "offset",
+          "value": "0"
+        }
+      ],
+      "headers": {
+        "accept": "application/json",
+        "authorization": "Basic ZGVtb3BhcnRuZXJAc2VycmFiaXRzLmNvbS5icjoxMjM0NTY=",
+        "x-dreamfactory-api-key": "5f8ebe41ee8d96a648cc9c055661cf54f4bbbb9d77bb9ec8e49178f0f491764c"
+      }
+    },
+    {
+      "_id": "req_service_detail",
+      "name": "Get Service Detail",
+      "url": "https://apis.ccstg.com.br/services/1101",
+      "method": "GET",
+      "headers": {
+        "accept": "application/json",
+        "authorization": "Basic ZGVtb3BhcnRuZXJAc2VycmFiaXRzLmNvbS5icjoxMjM0NTY=",
+        "x-dreamfactory-api-key": "5f8ebe41ee8d96a648cc9c055661cf54f4bbbb9d77bb9ec8e49178f0f491764c"
+      }
+    },
+    {
+      "_id": "req_update_service",
+      "name": "Update Service",
+      "url": "https://apis.ccstg.com.br/services/1101",
+      "method": "PUT",
+      "headers": {
+        "accept": "application/json",
+        "authorization": "Basic ZGVtb3BhcnRuZXJAc2VycmFiaXRzLmNvbS5icjoxMjM0NTY=",
+        "x-dreamfactory-api-key": "5f8ebe41ee8d96a648cc9c055661cf54f4bbbb9d77bb9ec8e49178f0f491764c",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "internal_code": "847291"
+      }
+    },
+    {
+      "_id": "req_boards_list",
+      "name": "List Boards",
+      "url": "https://apis.ccstg.com.br/materials/boards",
+      "method": "GET",
+      "headers": {
+        "accept": "application/json",
+        "authorization": "Basic ZGVtb3BhcnRuZXJAc2VycmFiaXRzLmNvbS5icjoxMjM0NTY=",
+        "x-dreamfactory-api-key": "5f8ebe41ee8d96a648cc9c055661cf54f4bbbb9d77bb9ec8e49178f0f491764c"
+      }
+    },
+    {
+      "_id": "req_update_boards",
+      "name": "Update Multiple Boards",
+      "url": "https://apis.ccstg.com.br/materials/boards",
+      "method": "PUT",
+      "headers": {
+        "accept": "application/json",
+        "authorization": "Basic ZGVtb3BhcnRuZXJAc2VycmFiaXRzLmNvbS5icjoxMjM0NTY=",
+        "x-dreamfactory-api-key": "5f8ebe41ee8d96a648cc9c055661cf54f4bbbb9d77bb9ec8e49178f0f491764c",
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "resource": [
+          {
+            "internal_code": "59",
+            "price": 237.89,
+            "stock": 127,
+            "unit": 500,
+            "active": true
+          },
+          {
+            "internal_code": "555",
+            "price": 360,
+            "stock": 350,
+            "unit": 1,
+            "active": true
+          }
+        ]
+      }
+    }
+  ]
+}

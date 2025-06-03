@@ -1,0 +1,70 @@
+@baseUrl = https://apis.ccstg.com.br
+@authToken = Basic ZGVtb3BhcnRuZXJAc2VycmFiaXRzLmNvbS5icjoxMjM0NTY=
+@apiKey = 5f8ebe41ee8d96a648cc9c055661cf54f4bbbb9d77bb9ec8e49178f0f491764c
+
+### Listar Servicios
+GET {{baseUrl}}/services?status=6&limit=100&offset=0
+accept: application/json
+authorization: {{authToken}}
+x-dreamfactory-api-key: {{apiKey}}
+
+### Obtener Detalle de Servicio
+GET {{baseUrl}}/services/1101
+accept: application/json
+authorization: {{authToken}}
+x-dreamfactory-api-key: {{apiKey}}
+
+### Actualizar Servicio
+PUT {{baseUrl}}/services/1101
+accept: application/json
+authorization: {{authToken}}
+x-dreamfactory-api-key: {{apiKey}}
+Content-Type: application/json
+
+{
+    "internal_code": "847291"
+}
+
+### Listar Tableros
+GET {{baseUrl}}/materials/boards
+accept: application/json
+authorization: {{authToken}}
+x-dreamfactory-api-key: {{apiKey}}
+
+### Actualizar Múltiples Tableros
+PUT {{baseUrl}}/materials/boards
+accept: application/json
+authorization: {{authToken}}
+x-dreamfactory-api-key: {{apiKey}}
+Content-Type: application/json
+
+{
+    "resource": [
+        {
+            "internal_code": "59",
+            "price": 237.89,
+            "stock": 127,
+            "unit": 500,
+            "active": true
+        },
+        {
+            "internal_code": "555",
+            "price": 360,
+            "stock": 350,
+            "unit": 1,
+            "active": true
+        }
+    ]
+}
+
+### Obtener Fitas (Edges)
+GET {{baseUrl}}/materials/edges
+accept: application/json
+authorization: {{authToken}}
+x-dreamfactory-api-key: {{apiKey}}
+
+### Obtener Componentes
+GET {{baseUrl}}/materials/components
+accept: application/json
+authorization: {{authToken}}
+x-dreamfactory-api-key: {{apiKey}}
